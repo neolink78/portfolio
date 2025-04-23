@@ -57,6 +57,7 @@ body {
     background: var(--stroke-grey, #232426);
     border-radius: 4px;
   }
+  background-color: #0f0f0f;
 }
 
 #tsparticles {

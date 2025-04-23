@@ -23,14 +23,14 @@ const ParticlesBackground= () => {
           options={{
             background: {
               color: {
-                 value: '#010203',
+                 value: 'transparent',
               },
             },
             fpsLimit: 120,
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -39,21 +39,31 @@ const ParticlesBackground= () => {
                 },
               },
               modes: {
+                bubble: {
+                  size: 40,
+                },
                 push: {
-                  quantity: 0,
+                  quantity: 8,
                 },
                 repulse: {
-                  distance: 200,
+                  distance: 150,
                   duration: 0.4,
+                },
+                grab: {
+                  line_linked: {
+                    enable: true,
+                    opacity: 1,
+                  },
+                  distance: 300,
                 },
               },
             },
             particles: {
               color: {
-                value: "#ffffff",
+                value: "#b3b3b3",
               },
               links: {
-                color: "#ffffff",
+                color: "#b3b3b3",
                 distance: 100,
                 enable: true,
                 opacity: 0.5,
@@ -72,7 +82,7 @@ const ParticlesBackground= () => {
                 density: {
                   enable: true,
                 },
-                value: 40,
+                value: 100,
               },
               opacity: {
                 value: 0.5,
