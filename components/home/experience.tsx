@@ -2,11 +2,23 @@ import CountUp from "react-countup"
 
 export const Experience = () => {
     return (
-        <div className="flex justify-between mt-5">
-            <p><CountUp end={26} duration={5} /> months at current role</p>
-            <p><span>2</span> Years of professional experience</p>
-            <p><span>1</span> company worked at</p>
-            <p><span>2</span> technologies mastered</p>
+        <div className="flex justify-between mt-20">
+            <p className="flex gap-4 items-center"><span className="flex gap-4 items-center ">
+                <CountUp end={26} duration={5} className="text-4xl xl:text-5xl font-bold" />
+            </span>
+                months at current role</p>
+            <p className="flex gap-4 items-center"><span className="flex gap-4 items-center ">
+                <CountUp end={2} duration={5} className="text-4xl xl:text-5xl font-bold" />
+            </span>
+                Years of professional experience</p>
+            <p className="flex gap-4 items-center"><span className="flex gap-4 items-center ">
+                <CountUp end={1} duration={5} className="text-4xl xl:text-5xl font-bold" />
+            </span>
+                company worked at</p>
+            <p className="flex gap-4 items-center"><span className="flex gap-4 items-center ">
+                <CountUp end={2} duration={5} className="text-4xl xl:text-5xl font-bold" />
+            </span>
+                technologies mastered</p>
         </div>
     )
 }

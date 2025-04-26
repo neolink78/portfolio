@@ -5,11 +5,10 @@ import ParticlesBackground from "@/components/Particles";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col mt-12">
+    <div className="min-h-screen flex flex-col mt-20">
       <ParticlesBackground />
       <main className="flex text-white justify-between items-center">
         <div className="w-96 flex flex-col gap-5">
-
           <p className="text-7xl font-inspiration font-bold">Hello I&apos;m
             <span className="text-orange-500"> Thibaut</span>
           </p>
