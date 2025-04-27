@@ -4,7 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import { initParticlesEngine } from "@tsparticles/react";
 import type { Engine } from "@tsparticles/engine";
 
-const ParticlesBackground= () => {
+const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ParticlesBackground= () => {
           options={{
             background: {
               color: {
-                 value: 'transparent',
+                value: 'transparent',
               },
             },
             fpsLimit: 120,
@@ -94,7 +94,7 @@ const ParticlesBackground= () => {
                 value: { min: 1, max: 5 },
               },
             },
-            detectRetina: true, 
+            detectRetina: true,
           }}
         />
       )}

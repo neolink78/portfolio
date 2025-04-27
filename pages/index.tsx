@@ -1,13 +1,16 @@
 import { Experience } from "@/components/home/experience";
 import { Icons } from "@/components/home/icons";
-import Me from "@/components/home/motion";
+import Motion from "@/components/home/motion";
 import ParticlesBackground from "@/components/Particles";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+  const { theme } = useTheme()
+
   return (
-    <div className="min-h-screen flex flex-col mt-20">
-      <ParticlesBackground />
-      <main className="flex text-white justify-between items-center">
+    <div className={`min-h-screen flex flex-col mt-20`}>
+      {theme === 'dark' && <ParticlesBackground />}
+      <main className="flex text-black dark:text-white justify-between items-center">
         <div className="w-96 flex flex-col gap-5">
           <p className="text-7xl font-inspiration font-bold">Hello I&apos;m
             <span className="text-orange-500"> Thibaut</span>
@@ -19,7 +22,7 @@ export default function Home() {
           <Icons />
         </div>
         <div>
-          <Me />
+          <Motion />
         </div>
       </main>
       <Experience />

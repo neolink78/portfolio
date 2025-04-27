@@ -2,9 +2,12 @@ import { FrenchFlagIcon } from "@/lib/icons/frenchFlag";
 import { Sun } from "@/lib/icons/sun";
 import { EnglishFlagIcon } from "@/lib/icons/ukFlag";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
+
 
 export const Navigation = () => {
     const router = useRouter();
+    const { theme, setTheme } = useTheme()
 
     return (
         <div className="flex gap-7 items-center">
@@ -37,11 +40,14 @@ export const Navigation = () => {
                     Personal Projects
                 </p>
             </div>
-            <p className="p-[0.02rem] h-16 bg-white "></p>
-            <div className="flex gap-5 items-center">
-                <Sun
+            <p className="p-[0.02rem] h-16 bg-white"></p>
+            <div className="flex gap-5 items-center" onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
+                {theme === 'dark' ? <Sun
                     className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
+                /> : <Sun
+                    className={`p-2 bg-white-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
                 />
+                }
 
                 <FrenchFlagIcon className="w-5 h-5 hover:cursor-pointer" />
                 <EnglishFlagIcon className="w-5 h-5 hover:cursor-pointer" />

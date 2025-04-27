@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
-const Me = () => {
+const Motion = () => {
+    const { theme } = useTheme()
     const [showGlow, setShowGlow] = useState(false);
     const [hasLoadedInDarkMode, setHasLoadedInDarkMode] = useState(false);
-    const isDarkMode = true
+    const isDarkMode = theme === 'dark' ? true : false
     useEffect(() => {
         if (!isDarkMode) {
             const timer = setTimeout(() => setShowGlow(true), 2000);
@@ -141,4 +143,4 @@ const Me = () => {
     );
 };
 
-export default Me;
+export default Motion;
