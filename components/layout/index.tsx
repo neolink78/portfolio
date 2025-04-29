@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Navigation } from "./navigation";
 import { Footer } from "./footer";
 import { useTheme } from "next-themes";
@@ -10,8 +10,12 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
     const router = useRouter()
-    const { theme } = useTheme()
+    const { resolvedTheme } = useTheme()
     const dotRef = useRef<HTMLParagraphElement>(null)
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+    if (!mounted) return null;
 
     const triggerBounce = () => {
         if (dotRef.current) {
@@ -22,8 +26,8 @@ const Layout = ({ children }: Props) => {
     }
 
     return (
-        <div className={`text-white dark:text-dark transition-colors duration-700 ${theme === 'light' && 'bg-gradient-to-r from-[#FFE6C9] to-[#FFD0A3]'}`}>
-            <div className={`max-w-6xl mx-auto pt-12`}>
+        <div className={`text-black dark:text-white transition-colors duration-700 ${resolvedTheme === 'light' && 'bg-gradient-to-r from-[#FFE6C9] to-[#FFD0A3]'}`}>
+            <div className={`max-w-6xl mx-auto pt-10`}>
                 <div className="flex justify-between items-center">
                     <div className="text-4xl font-bold flex hover:cursor-pointer" onClick={() => router.push('/')}>
                         {['T', 'h', 'i', 'b', 'a', 'u', 't'].map((letter, idx) => (

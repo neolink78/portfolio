@@ -18,85 +18,87 @@ const ParticlesBackground = () => {
   return (
     <>
       {init && (
-        <Particles
-          id="tsparticles"
-          options={{
-            background: {
-              color: {
-                value: 'transparent',
-              },
-            },
-            fpsLimit: 120,
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: false,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
+        <div className="fixed top-0 left-0 w-full h-full -z-10">
+          <Particles
+            id="tsparticles"
+            options={{
+              background: {
+                color: {
+                  value: 'transparent',
                 },
               },
-              modes: {
-                bubble: {
-                  size: 40,
-                },
-                push: {
-                  quantity: 8,
-                },
-                repulse: {
-                  distance: 150,
-                  duration: 0.4,
-                },
-                grab: {
-                  line_linked: {
-                    enable: true,
-                    opacity: 1,
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: false,
+                    mode: "push",
                   },
-                  distance: 300,
+                  onHover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                },
+                modes: {
+                  bubble: {
+                    size: 40,
+                  },
+                  push: {
+                    quantity: 8,
+                  },
+                  repulse: {
+                    distance: 150,
+                    duration: 0.4,
+                  },
+                  grab: {
+                    line_linked: {
+                      enable: true,
+                      opacity: 1,
+                    },
+                    distance: 300,
+                  },
                 },
               },
-            },
-            particles: {
-              color: {
-                value: "#b3b3b3",
-              },
-              links: {
-                color: "#b3b3b3",
-                distance: 100,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
+              particles: {
+                color: {
+                  value: "#b3b3b3",
                 },
-                speed: 2,
-                straight: false,
-              },
-              number: {
-                density: {
+                links: {
+                  color: "#b3b3b3",
+                  distance: 100,
                   enable: true,
+                  opacity: 0.5,
+                  width: 1,
                 },
-                value: 100,
+                move: {
+                  direction: "none",
+                  enable: true,
+                  outModes: {
+                    default: "bounce",
+                  },
+                  speed: 2,
+                  straight: false,
+                },
+                number: {
+                  density: {
+                    enable: true,
+                  },
+                  value: 100,
+                },
+                opacity: {
+                  value: 0.5,
+                },
+                shape: {
+                  type: "circle",
+                },
+                size: {
+                  value: { min: 1, max: 5 },
+                },
               },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 5 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+              detectRetina: true,
+            }}
+          />
+        </div>
       )}
     </>
   );

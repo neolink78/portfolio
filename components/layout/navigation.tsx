@@ -3,11 +3,12 @@ import { Sun } from "@/lib/icons/sun";
 import { EnglishFlagIcon } from "@/lib/icons/ukFlag";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import { Moon } from "@/lib/icons/moon";
 
 
 export const Navigation = () => {
     const router = useRouter();
-    const { theme, setTheme } = useTheme()
+    const { resolvedTheme, setTheme } = useTheme()
 
     return (
         <div className="flex gap-7 items-center">
@@ -40,12 +41,12 @@ export const Navigation = () => {
                     Personal Projects
                 </p>
             </div>
-            <p className="p-[0.02rem] h-16 bg-white"></p>
-            <div className="flex gap-5 items-center" onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
-                {theme === 'dark' ? <Sun
+            <p className="p-[0.02rem] h-16 bg-black dark:bg-white"></p>
+            <div className="flex gap-5 items-center" onClick={() => resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark')}>
+                {resolvedTheme === 'dark' ? <Sun
                     className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
-                /> : <Sun
-                    className={`p-2 bg-white-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
+                /> : <Moon
+                    className={`p-2 bg-black rounded-md hover:cursor-pointer fill-white hover:fill-orange-500 transition-colors duration-300`}
                 />
                 }
 

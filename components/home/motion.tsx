@@ -4,22 +4,17 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
 const Motion = () => {
-    const { theme } = useTheme()
+    const { resolvedTheme } = useTheme()
     const [showGlow, setShowGlow] = useState(false);
-    const [hasLoadedInDarkMode, setHasLoadedInDarkMode] = useState(false);
-    const isDarkMode = theme === 'dark' ? true : false
+
+    const isDarkMode = resolvedTheme === 'dark' ? true : false
+
     useEffect(() => {
         if (!isDarkMode) {
             const timer = setTimeout(() => setShowGlow(true), 2000);
             return () => clearTimeout(timer);
         }
     }, [isDarkMode]);
-
-    useEffect(() => {
-        if (isDarkMode && !hasLoadedInDarkMode) {
-            setHasLoadedInDarkMode(true);
-        }
-    }, [isDarkMode, hasLoadedInDarkMode]);
 
     const renderGlow = () =>
         !isDarkMode &&
@@ -51,11 +46,7 @@ const Motion = () => {
                     strokeWidth="6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    initial={
-                        hasLoadedInDarkMode
-                            ? { pathLength: 1, strokeOpacity: 1 }
-                            : { pathLength: 0, strokeOpacity: 0.3 }
-                    }
+                    initial={{ pathLength: 0, strokeOpacity: 0.3 }}
                     animate={{ pathLength: 1, strokeOpacity: 1 }}
                     transition={{
                         duration: 3,
