@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className='min-h-screen text-black dark:text-white flex flex-col mt-20'>
       {resolvedTheme === 'dark' && <ParticlesBackground />}
-      <main className="flex justify-between items-center">
+      <main className="flex flex-col-reverse xl:flex-row justify-between items-center">
         <div className="w-96 flex flex-col gap-5 ">
-          <p className="text-7xl font-inspiration font-bold">Hello I&apos;m
+          <p className="flex flex-col items-center xl:block text-7xl font-inspiration font-bold mt-5 xl:mt-0">Hello I&apos;m
             <span className="text-orange-500"> Thibaut</span>
           </p>
           <p className="font-text italic text-lg/7">I&apos;m a passionate full-stack developer with a focus on building dynamic and efficient web applications.

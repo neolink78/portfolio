@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       screens: {
         'xs': '350px',
+        'lg': '950px',
         'xl': '1200px'
       },
       colors: {

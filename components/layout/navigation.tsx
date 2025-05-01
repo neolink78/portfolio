@@ -11,7 +11,7 @@ export const Navigation = () => {
     const { resolvedTheme, setTheme } = useTheme()
 
     return (
-        <div className="flex gap-7 items-center">
+        <div className="hidden lg:flex gap-7 items-center">
             <div className="flex gap-5 ">
                 <p
                     className={`${router.route === "/"
