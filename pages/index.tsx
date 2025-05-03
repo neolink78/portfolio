@@ -8,7 +8,7 @@ export default function Home() {
   const { resolvedTheme } = useTheme()
 
   return (
-    <div className='min-h-screen text-black dark:text-white flex flex-col mt-20'>
+    <div className='min-h-screen text-black dark:text-white flex flex-col mt-20 mb-5 lg:mb-0'>
       {resolvedTheme === 'dark' && <ParticlesBackground />}
       <main className="flex flex-col-reverse xl:flex-row justify-between items-center">
         <div className="w-96 flex flex-col gap-5 ">

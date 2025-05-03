@@ -63,8 +63,8 @@ export const Navigation = ({ setIsOpen }: NavigationType) => {
 
             </div>
             <div className="flex gap-5">
-                <FrenchFlagIcon className="w-7 h-7 hover:cursor-pointer" />
-                <EnglishFlagIcon className="w-7 h-7 hover:cursor-pointer" />
+                <FrenchFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
+                <EnglishFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
             </div>
         </div>
     )
