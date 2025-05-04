@@ -38,7 +38,7 @@ export const Navigation = () => {
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => router.push("/projects")}
                 >
-                    Personal Projects
+                    Projects
                 </p>
             </div>
             <p className="p-[0.02rem] h-16 bg-black dark:bg-white"></p>

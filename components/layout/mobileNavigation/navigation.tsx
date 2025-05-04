@@ -50,7 +50,7 @@ export const Navigation = ({ setIsOpen }: NavigationType) => {
                         router.push("/projects")
                     }}
                 >
-                    Personal Projects
+                    Projects
                 </p>
             </div>
             <div className="flex flex-col gap-5 items-center" onClick={() => resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark')}>
