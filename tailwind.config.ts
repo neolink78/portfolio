@@ -12,6 +12,8 @@ const config: Config = {
     extend: {
       screens: {
         'xs': '350px',
+        'grid': '640px',
+        'gridxl': '800px',
         'lg': '950px',
         'xl': '1200px'
       },

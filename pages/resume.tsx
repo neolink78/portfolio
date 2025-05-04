@@ -25,25 +25,38 @@ const Resume = () => {
     return (
         <div className="text-black dark:text-white min-h-screen flex flex-col items-center xl:items-start xl:flex-row mt-40 gap-10">
             <div className="flex flex-col gap-7">
-                <button className={`hover:bg-orange-500 rounded-lg w-[23rem] px-5 py-2 text-xl font-bold ${display === 'about' ?
-                    'bg-orange-500 hover:cursor-default' : 'bg-[#2e2e2e]'}`}
+                <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'about' ?
+                    'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
                     onClick={() => setDisplay('about')}>
                     About me
                 </button>
-                <button className={`hover:bg-orange-500 rounded-lg w-[23rem] px-5 py-2 text-xl font-bold ${display === 'skills' ?
-                    'bg-orange-500' : 'bg-[#2e2e2e]'}`}
+                <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'skills' ?
+                    'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
                     onClick={() => setDisplay('skills')}>Skills</button>
-                <button className={`hover:bg-orange-500 rounded-lg w-[23rem] px-5 py-2 text-xl font-bold ${display === 'experience' ?
-                    'bg-orange-500' : 'bg-[#2e2e2e]'}`}
+                <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'experience' ?
+                    'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
                     onClick={() => setDisplay('experience')}>My experience</button>
-                <button className={`hover:bg-orange-500 rounded-lg w-[23rem] px-5 py-2 text-xl font-bold ${display === 'education' ?
-                    'bg-orange-500' : 'bg-[#2e2e2e]'}`}
+                <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'education' ?
+                    'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
                     onClick={() => setDisplay('education')}>Education</button>
             </div>
             <div className="relative flex justify-center">
                 {display === 'about' && <About />}
                 {display === 'skills' && <Skills languages={[
-                    Html5, Css3, Javascript, Typescript, Tailwind, Sass, React, Nextjs, Nodejs, Postgresql, Prisma, Express, Figma, Openai
+                    { icon: Html5, name: "Html5" },
+                    { icon: Css3, name: 'Css3' },
+                    { icon: Javascript, name: 'Javascript' },
+                    { icon: Typescript, name: 'Typescript' },
+                    { icon: Tailwind, name: 'TailwindCss' },
+                    { icon: Sass, name: 'Sass' },
+                    { icon: React, name: 'React' },
+                    { icon: Nextjs, name: 'Nextjs' },
+                    { icon: Nodejs, name: 'Nodejs' },
+                    { icon: Postgresql, name: 'Postgresql' },
+                    { icon: Prisma, name: 'Prisma' },
+                    { icon: Express, name: 'Express' },
+                    { icon: Figma, name: 'Figma' },
+                    { icon: Openai, name: 'Openai' }
                 ]} />}
                 {display === 'experience' && <Experience />}
                 {display === 'education' && <Education />}

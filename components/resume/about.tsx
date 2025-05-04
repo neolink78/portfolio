@@ -1,7 +1,7 @@
 export const About = () => {
     return (
 
-        <div className="flex flex-col gap-5 w-[30rem] items-center xl:items-start">
+        <div className="flex flex-col gap-5 xl:w-[30rem] items-center xl:items-start">
             <p className="text-3xl font-bold">About me</p>
             <p className="text-lg">
                 I&apos;m a full-stack developer with over 2+ years of professional experience in building web applications.
