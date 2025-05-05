@@ -61,7 +61,8 @@ const Resume = () => {
                 {display === 'experience' && <Experience />}
                 {display === 'education' && <Education />}
             </div>
-        </div>)
+        </div>
+    )
 }
 
 export default Resume
