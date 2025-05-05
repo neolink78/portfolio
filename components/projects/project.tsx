@@ -15,12 +15,12 @@ type ProjectType = {
 export const Project = ({ title, description, link, githubLink, isWebsite, image, imageClass }: ProjectType) => {
     return (
         <div className="flex mt-8">
-            <div className="w-[0.02rem] bg-black dark:bg-white" />
+            <div className="grid:w-[0.02rem] bg-black dark:bg-white" />
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="ml-8 flex flex-col gap-5"
+                className="grid:ml-8 flex flex-col gap-5"
             >
                 <div>
                     <p className="text-xl font-bold dark:text-orange-500">{title}</p>
@@ -53,10 +53,13 @@ export const Project = ({ title, description, link, githubLink, isWebsite, image
 
                         }
                     </p>
+
                     <Image alt={title} src={`/${image}`}
-                        width={2000} height={2000}
+                        width={800} height={800}
                         className={imageClass}
+
                     />
+
                 </div>
             </motion.div>
         </div>
