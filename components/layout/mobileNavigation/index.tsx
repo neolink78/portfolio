@@ -2,8 +2,14 @@ import { List } from "@/lib/icons/list"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { Navigation } from "./navigation"
+import { TFunction } from "next-i18next";
 
-export const MobileNavigation = () => {
+type NavigationType = {
+    t: TFunction,
+    changeLanguage: (lang: string) => void
+}
+
+export const MobileNavigation = ({ t, changeLanguage }: NavigationType) => {
     const [isOpen, setIsOpen] = useState(false)
     const router = useRouter()
 
@@ -51,7 +57,7 @@ export const MobileNavigation = () => {
                     >Thibaut
                         <span className="text-orange-500">.</span>
                     </p>
-                    <Navigation setIsOpen={setIsOpen} />
+                    <Navigation setIsOpen={setIsOpen} t={t} changeLanguage={changeLanguage} />
                 </div>
             </div>
         </div>

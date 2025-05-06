@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import { useTranslation } from "next-i18next";
 
 const Motion = () => {
     const { resolvedTheme } = useTheme()
     const [showGlow, setShowGlow] = useState(false);
+    const { t } = useTranslation('common')
 
     const isDarkMode = resolvedTheme === 'dark' ? true : false
 
@@ -116,7 +118,7 @@ const Motion = () => {
 
                     <div className="hidden lg:block absolute h-[1px] bottom-1 right-0 text-black dark:text-gray-500">
                         <span className="px-1 text-[9px]">
-                            This image was generated with Dall-E 3
+                            {t("index_imageai")}
                         </span>
                     </div>
 

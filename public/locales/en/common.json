@@ -1,0 +1,49 @@
+{
+    "header_homepage": "Home",
+    "header_resume": "Resume",
+    "header_projects": "Projects",
+
+    "index_description": "I’m a passionate full-stack developer with a focus on building dynamic and efficient web applications. Since beginning my journey in 2022, I’ve had the privilege of collaborating through multiple projects, sharpening my expertise in both front-end and back-end development, along with a variety of other skills.",
+    "index_imageai": "This image was generated with Dall-E 3",
+
+    "index_experience_role": "Months at current role",
+    "index_experience_experience": "Years of professional experience",
+    "index_experience_companies": "Company worked at",
+    "index_experience_techs": "Technologies mastered",
+
+    "resume_about": "About me",
+    "resume_skills": "Skills",
+    "resume_experience": "My experience",
+    "resume_education": "Education",
+
+    "resume_about_description": "I’m a full-stack developer with over 2+ years of professional experience in building web applications. I specialize in Next.Js for the front part and Nodejs for the backend part. I aim to deliver robust, scalable solutions across the entire tech stack. Outside of coding, I enjoy traveling and doing hikings.",
+
+    "resume_experience_firstjob_date": "September 2024 - Present",
+    "resume_experience_firstjob_job": "Full-stack Developer",
+    "resume_experience_firstjob_company": "Freelance",
+    "resume_experience_firstjob_description": "Developing and maintaining configurable applications for several customers mainly using Nextjs and Nodejs.",
+    "resume_experience_secondjob_date": "Mars 2023 - September 2024",
+    "resume_experience_secondjob_job": "Full-stack Developer",
+    "resume_experience_secondjob_company": "Pulselab",
+    "resume_experience_secondjob_description": "Work-study program.<br /> Work part: Made 2 websites from scratch in a pair, a case opening site and an online sports betting site.<br /> Study part: Made an IDE similar to CodeSandbox with 3 other students.",
+
+    "resume_education_firsteducation_date": "March 2023 - September 2024",
+    "resume_education_firsteducation_job": "Full-stack Developer",
+    "resume_education_firsteducation_school": "Wild Code School",
+    "resume_education_firsteducation_description": "Internship to prepare a master degree obtained by the end of it. Learned graphQl, Apollo, NextJs, Fastify, PostgreSql and many more tools !",
+    "resume_education_secondeducation_date": "September 2022 - March 2023",
+    "resume_education_secondeducation_job": "Full-stack Developer",
+    "resume_education_secondeducation_school": "Wild Code School",
+    "resume_education_secondeducation_description": "Learned Javascript through 5 months of studies where I’ve been teached Html5, Css3, Javascript, React, Vite, Nodejs, ExpressJs, MySql.",
+   
+    "projects_code": "You can check the code here:",
+    "projects_visit": "Visit the website there:",
+    "projects_robot": "Try it out on your discord server:",
+
+    "projects_first_title": "Bernard’s workshop",
+    "projects_first_description": "Website showcasing paintings made by a painter located in the North-West of France. It has been the first project done by myself from scratch.",
+    "projects_second_description": "Robot made to scrap data from the Epic Games store to train myself with easy scrapping using Got. Available through discord to respond to query commands which provides current and next week’s free games.",
+
+    "footer": "All rights reserved. | Made with ",
+    "footer_and": "and "
+}

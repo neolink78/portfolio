@@ -15,12 +15,16 @@ import { React } from "@/lib/icons/skills/react"
 import { Sass } from "@/lib/icons/skills/sass"
 import { Tailwind } from "@/lib/icons/skills/tailwind"
 import { Typescript } from "@/lib/icons/skills/typescript"
-import { Experience } from "@/components/resume/experience"
-import { Education } from "@/components/resume/education"
+import { Experiences } from "@/components/resume/experience"
+import { Educations } from "@/components/resume/education"
+import { getStaticPropsWithTranslations } from '@/hoc/serverSideProps';
+import { useTranslation } from "next-i18next";
 
+export const getStaticProps = getStaticPropsWithTranslations()
 
 const Resume = () => {
     const [display, setDisplay] = useState('about')
+    const { t } = useTranslation('common')
 
     return (
         <div className="text-black dark:text-white min-h-screen flex flex-col items-center xl:items-start xl:flex-row mt-40 gap-10">
@@ -28,17 +32,17 @@ const Resume = () => {
                 <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'about' ?
                     'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
                     onClick={() => setDisplay('about')}>
-                    About me
+                    {t("resume_about")}
                 </button>
                 <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'skills' ?
                     'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
-                    onClick={() => setDisplay('skills')}>Skills</button>
+                    onClick={() => setDisplay('skills')}>{t("resume_skills")}</button>
                 <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'experience' ?
                     'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
-                    onClick={() => setDisplay('experience')}>My experience</button>
+                    onClick={() => setDisplay('experience')}>{t("resume_experience")}</button>
                 <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'education' ?
                     'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
-                    onClick={() => setDisplay('education')}>Education</button>
+                    onClick={() => setDisplay('education')}>{t("resume_education")}</button>
             </div>
             <div className="relative flex justify-center">
                 {display === 'about' && <About />}
@@ -58,8 +62,8 @@ const Resume = () => {
                     { icon: Figma, name: 'Figma' },
                     { icon: Openai, name: 'Openai' }
                 ]} />}
-                {display === 'experience' && <Experience />}
-                {display === 'education' && <Education />}
+                {display === 'experience' && <Experiences />}
+                {display === 'education' && <Educations />}
             </div>
         </div>
     )

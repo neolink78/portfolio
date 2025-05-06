@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 type SkillType = {
     languages: { icon: React.ComponentType<{ className: string }>; name: string }[];
@@ -20,6 +21,8 @@ const itemVariants = {
 };
 
 export const Skills = ({ languages }: SkillType) => {
+    const { t } = useTranslation('common')
+
     return (
         <AnimatePresence>
             <motion.div
@@ -29,7 +32,7 @@ export const Skills = ({ languages }: SkillType) => {
                 exit="hidden"
             >
                 <div className="flex flex-col gap-5 xl:w-[45rem]">
-                    <p className="text-3xl font-bold flex justify-center xl:justify-start">Skills</p>
+                    <p className="text-3xl font-bold flex justify-center xl:justify-start">{t("resume_skills")}</p>
                     <div className="grid grid-cols-2 grid:grid-cols-3 gridxl:grid-cols-4 gap-5">
                         {languages.map(({ icon: SkillIcon, name }, idx) => (
                             <motion.div

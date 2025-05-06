@@ -4,9 +4,14 @@ import { EnglishFlagIcon } from "@/lib/icons/ukFlag";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { Moon } from "@/lib/icons/moon";
+import { TFunction } from "next-i18next";
 
+type NavigationType = {
+    t: TFunction,
+    changeLanguage: (lang: string) => void
+}
 
-export const Navigation = () => {
+export const Navigation = ({ t, changeLanguage }: NavigationType) => {
     const router = useRouter();
     const { resolvedTheme, setTheme } = useTheme()
 
@@ -20,7 +25,7 @@ export const Navigation = () => {
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => router.push("/")}
                 >
-                    Home
+                    {t("header_homepage")}
                 </p>
                 <p
                     className={`${router.route === "/resume"
@@ -29,7 +34,7 @@ export const Navigation = () => {
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => router.push("/resume")}
                 >
-                    Resume
+                    {t("header_resume")}
                 </p>
                 <p
                     className={`${router.route === "/projects"
@@ -38,20 +43,30 @@ export const Navigation = () => {
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => router.push("/projects")}
                 >
-                    Projects
+                    {t("header_projects")}
                 </p>
             </div>
             <p className="p-[0.02rem] h-16 bg-black dark:bg-white"></p>
-            <div className="flex gap-5 items-center" onClick={() => resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark')}>
-                {resolvedTheme === 'dark' ? <Sun
-                    className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
-                /> : <Moon
-                    className={`p-2 bg-black rounded-md hover:cursor-pointer fill-white hover:fill-orange-500 transition-colors duration-300`}
-                />
+            <div className="flex gap-5 items-center">
+                {resolvedTheme === 'dark' ?
+                    <div onClick={() => setTheme('light')}>
+                        <Sun
+                            className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
+                        />
+                    </div>
+                    :
+                    <div onClick={() => setTheme('dark')}>
+                        <Moon
+                            className={`p-2 bg-black rounded-md hover:cursor-pointer fill-white hover:fill-orange-500 transition-colors duration-300`}
+                        />
+                    </div>
                 }
-
-                <FrenchFlagIcon className="w-5 h-5 hover:cursor-pointer" />
-                <EnglishFlagIcon className="w-5 h-5 hover:cursor-pointer" />
+                <div onClick={() => changeLanguage('fr')}>
+                    <FrenchFlagIcon className="w-5 h-5 hover:cursor-pointer" />
+                </div>
+                <div onClick={() => changeLanguage('en')}>
+                    <EnglishFlagIcon className="w-5 h-5 hover:cursor-pointer" />
+                </div>
             </div>
         </div>
     );

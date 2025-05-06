@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useTranslation } from "next-i18next";
 
 type ProjectType = {
     title: string
@@ -13,6 +14,7 @@ type ProjectType = {
 
 
 export const Project = ({ title, description, link, githubLink, isWebsite, image, imageClass }: ProjectType) => {
+    const { t } = useTranslation('common')
     return (
         <div className="flex mt-8">
             <div className="grid:w-[0.02rem] bg-black dark:bg-white" />
@@ -25,27 +27,27 @@ export const Project = ({ title, description, link, githubLink, isWebsite, image
                 <div>
                     <p className="text-xl font-bold dark:text-orange-500">{title}</p>
                     <p className="mt-2">{description} <br />
-                        You can check the code here:
+                        {t("projects_code")}
                         <a href={githubLink}
                             target="_blank" rel="noopener noreferrer"
-                            className="hover:text-blue-500 hover:underline"
+                            className="hover:text-orange-500 hover:underline"
                         >
                             {` ${githubLink}`}
                         </a> <br />
                         {isWebsite ?
-                            <p>Visit the website there:
+                            <p>{t("projects_visit")}
                                 <a href={link}
                                     target="_blank" rel="noopener noreferrer"
-                                    className="hover:text-blue-500 hover:underline"
+                                    className="hover:text-orange-500 hover:underline"
                                 >
                                     {` ${link}`}
                                 </a>
                             </p>
                             :
-                            <p>Try it out on your discord server:
+                            <p>{t("projects_robot")}
                                 <a href={link}
                                     target="_blank" rel="noopener noreferrer"
-                                    className="hover:text-blue-500 hover:underline"
+                                    className="hover:text-orange-500 hover:underline"
                                 >
                                     {` ${link}`}
                                 </a>

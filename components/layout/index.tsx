@@ -4,6 +4,8 @@ import { Navigation } from "./navigation";
 import { Footer } from "./footer";
 import { useTheme } from "next-themes";
 import { MobileNavigation } from './mobileNavigation/index'
+import { useTranslation } from "next-i18next";
+
 
 type Props = {
     children: React.ReactNode
@@ -14,6 +16,13 @@ const Layout = ({ children }: Props) => {
     const { resolvedTheme } = useTheme()
     const dotRef = useRef<HTMLParagraphElement>(null)
     const [mounted, setMounted] = useState(false);
+    const { t, i18n } = useTranslation('common')
+
+    const changeLanguage = (lang: string) => {
+        if (lang === i18n.language) return
+        i18n.changeLanguage(lang)
+        router.push(router.pathname, router.asPath, { locale: lang === 'en' ? false : lang })
+    }
 
     useEffect(() => setMounted(true), []);
     if (!mounted) return null;
@@ -36,11 +45,11 @@ const Layout = ({ children }: Props) => {
                         ))}
                         <p className="text-orange-400" onMouseEnter={triggerBounce} ref={dotRef} >.</p>
                     </div>
-                    <Navigation />
-                    <MobileNavigation />
+                    <Navigation t={t} changeLanguage={changeLanguage} />
+                    <MobileNavigation t={t} changeLanguage={changeLanguage} />
                 </div>
                 {children}
-                <Footer />
+                <Footer t={t} />
             </div>
         </div>
     )

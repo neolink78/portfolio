@@ -1,14 +1,18 @@
 import { Project } from "@/components/projects/project"
+import { getStaticPropsWithTranslations } from '@/hoc/serverSideProps';
+import { useTranslation } from "next-i18next";
 
+export const getStaticProps = getStaticPropsWithTranslations()
 
 const Projects = () => {
+    const { t } = useTranslation('common')
+
     return (
         <div className="mt-10 h-[35rem] overflow-y-scroll custom-scrollbar">
             <div className="flex flex-col gap-5">
                 <Project
-                    title="L'atelier de Bernard"
-                    description="Website showcasing paintings made by a painter located in the North-West of France.
-                        It has been the first project done by myself  from scratch."
+                    title={t("projects_first_title")}
+                    description={t("projects_first_description")}
                     link='https://atelier-de-bernard.vercel.app'
                     githubLink="https://github.com/neolink78/atelier-de-bernard"
                     image="atelier.png"
@@ -17,8 +21,7 @@ const Projects = () => {
                 />
                 <Project
                     title="Epic free games"
-                    description="Robot made to scrap data from the Epic Games store to train myself with easy scrapping using Got. 
-                Available through discord to respond to query commands which provides current and next week's free games."
+                    description={t("projects_second_description")}
                     link='https://shorturl.at/zcrtW'
                     githubLink="https://github.com/neolink78/EpicFreeGames"
                     image="bot.png"

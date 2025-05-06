@@ -4,12 +4,16 @@ import { EnglishFlagIcon } from "@/lib/icons/ukFlag";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { Moon } from "@/lib/icons/moon";
+import { TFunction } from "next-i18next";
 
 type NavigationType = {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+    t: TFunction,
+    changeLanguage: (lang: string) => void
 }
 
-export const Navigation = ({ setIsOpen }: NavigationType) => {
+
+export const Navigation = ({ setIsOpen, t, changeLanguage }: NavigationType) => {
     const router = useRouter()
     const { resolvedTheme, setTheme } = useTheme()
 
@@ -26,7 +30,7 @@ export const Navigation = ({ setIsOpen }: NavigationType) => {
                         router.push("/")
                     }}
                 >
-                    Home
+                    {t("header_homepage")}
                 </p>
                 <p
                     className={`${router.route === "/resume"
@@ -38,7 +42,7 @@ export const Navigation = ({ setIsOpen }: NavigationType) => {
                         router.push("/resume")
                     }}
                 >
-                    Resume
+                    {t("header_resume")}
                 </p>
                 <p
                     className={`${router.route === "/projects"
@@ -50,21 +54,32 @@ export const Navigation = ({ setIsOpen }: NavigationType) => {
                         router.push("/projects")
                     }}
                 >
-                    Projects
+                    {t("header_projects")}
                 </p>
             </div>
-            <div className="flex flex-col gap-5 items-center" onClick={() => resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark')}>
-                {resolvedTheme === 'dark' ? <Sun
-                    className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
-                /> : <Moon
-                    className={`p-2 bg-black rounded-md hover:cursor-pointer fill-white hover:fill-orange-500 transition-colors duration-300`}
-                />
+            <div className="flex flex-col gap-5 items-center">
+                {resolvedTheme === 'dark' ?
+                    <div onClick={() => setTheme('light')}>
+                        <Sun
+                            className={`p-2 bg-orange-500 rounded-md hover:bg-orange-400 hover:cursor-pointer stroke-white hover:stroke-black transition-colors duration-300`}
+                        />
+                    </div>
+                    :
+                    <div onClick={() => setTheme('dark')}>
+                        <Moon
+                            className={`p-2 bg-black rounded-md hover:cursor-pointer fill-white hover:fill-orange-500 transition-colors duration-300`}
+                        />
+                    </div>
                 }
 
             </div>
             <div className="flex gap-5">
-                <FrenchFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
-                <EnglishFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
+                <div onClick={() => changeLanguage('fr')}>
+                    <FrenchFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
+                </div>
+                <div onClick={() => changeLanguage('en')}>
+                    <EnglishFlagIcon className="rounded-full overflow-hidden w-7 h-7 hover:cursor-pointer" />
+                </div>
             </div>
         </div>
     )

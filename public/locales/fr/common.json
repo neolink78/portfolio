@@ -1,0 +1,49 @@
+{
+    "header_homepage": "Accueil",
+    "header_resume": "À propos",
+    "header_projects": "Projets",
+
+    "index_description": "Je suis un développeur full-stack passionné, spécialisé dans le développement d’applications web dynamiques et performantes. Depuis 2022, j’ai consolidé mes compétences en front-end, back-end ainsi que dans une variété d'autres domaines techniques, à travers diverses collaborations professionnelles.",
+    "index_imageai": "Image générée avec Dall-E 3",
+
+    "index_experience_role": "Mois dans le poste actuel",
+    "index_experience_experience": "Années d'expérience professionnelle",
+    "index_experience_companies": "Entreprise où j'ai travaillé",
+    "index_experience_techs": "Technologies maîtrisées",
+
+    "resume_about": "À propos de moi",
+    "resume_skills": "Compétences",
+    "resume_experience": "Mon expérience",
+    "resume_education": "Formation",
+
+    "resume_about_description": "Je suis un développeur full-stack avec plus de 2 ans d’expérience professionnelle dans la création d'applications web. Je me spécialise dans Next.js pour le front-end et Node.js pour le back-end. Mon objectif est de fournir des solutions robustes et évolutives sur l'ensemble de la pile technologique. En dehors du coding, j'aime voyager et faire des randonnées.",
+
+    "resume_experience_firstjob_date": "Septembre 2024 - Aujourd'hui",
+    "resume_experience_firstjob_job": "Développeur Full-stack",
+    "resume_experience_firstjob_company": "Freelance",
+    "resume_experience_firstjob_description": "Développement et maintenance d'applications configurables pour plusieurs clients, principalement en utilisant Next.js et Node.js.",
+    "resume_experience_secondjob_date": "Mars 2023 - Septembre 2024",
+    "resume_experience_secondjob_job": "Développeur Full-stack",
+    "resume_experience_secondjob_company": "Pulselab",
+    "resume_experience_secondjob_description": "Programme en alternance.<br /> Partie entreprise : Création de 2 sites web de zéro en binôme, un site de jeux d'ouverture de caisses et un site de paris sportifs en ligne.<br /> Partie étude : Création d'un IDE similaire à CodeSandbox avec 3 autres étudiants.",
+
+    "resume_education_firsteducation_date": "Mars 2023 - Septembre 2024",
+    "resume_education_firsteducation_job": "Développeur Full-stack",
+    "resume_education_firsteducation_school": "Wild Code School",
+    "resume_education_firsteducation_description": "Stage en préparation d’un diplôme de niveau bac+4 obtenu à la fin du programme. Apprentissage de GraphQL, Apollo, Next.js, Fastify, PostgreSQL et bien d'autres outils !",
+    "resume_education_secondeducation_date": "Septembre 2022 - Mars 2023",
+    "resume_education_secondeducation_job": "Développeur Full-stack",
+    "resume_education_secondeducation_school": "Wild Code School",
+    "resume_education_secondeducation_description": "Apprentissage de JavaScript pendant 5 mois de formation incluant HTML5, CSS3, JavaScript, React, Vite, Node.js, Express.js et MySQL.",
+
+    "projects_code": "Vous pouvez consulter le code ici :",
+    "projects_visit": "Visitez le site ici :",
+    "projects_robot": "Essayez-le sur votre serveur Discord :",
+
+    "projects_first_title": "L’atelier de Bernard",
+    "projects_first_description": "Site présentant des peintures réalisées par un artiste situé dans le nord-ouest de la France. Il s'agit du premier projet que j’ai entièrement réalisé seul en full-stack.",
+    "projects_second_description": "Robot conçu pour extraire des données de l'application EpicGamesStore afin de m'entraîner au scraping en utilisant Got. Accessible via Discord pour répondre à des commandes et fournir les jeux gratuits de la semaine en cours et de la semaine suivante.",
+
+    "footer": "Tous droits réservés. | Réalisé avec",
+    "footer_and": "et"
+}
