@@ -11,7 +11,7 @@
     "index_experience_companies": "Entreprise où j'ai travaillé",
     "index_experience_techs": "Technologies maîtrisées",
 
-    "resume_about": "À propos de moi",
+    "resume_about": "À propos",
     "resume_skills": "Compétences",
     "resume_experience": "Mon expérience",
     "resume_education": "Formation",
@@ -44,6 +44,6 @@
     "projects_first_description": "Site présentant des peintures réalisées par un artiste situé dans le nord-ouest de la France. Il s'agit du premier projet que j’ai entièrement réalisé seul en full-stack.",
     "projects_second_description": "Robot conçu pour extraire des données de l'application EpicGamesStore afin de m'entraîner au scraping en utilisant Got. Accessible via Discord pour répondre à des commandes et fournir les jeux gratuits de la semaine en cours et de la semaine suivante.",
 
-    "footer": "Tous droits réservés. | Réalisé avec",
-    "footer_and": "et"
+    "footer": "Tous droits réservés. | Réalisé avec ",
+    "footer_and": "et "
 }
