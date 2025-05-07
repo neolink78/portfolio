@@ -8,7 +8,7 @@ const Projects = () => {
     const { t } = useTranslation('common')
 
     return (
-        <div className="mt-10 min-h-screen">
+        <div className="mt-10">
             <div className="h-[35rem] xl:h-[40rem] overflow-y-scroll custom-scrollbar">
                 <div className="flex flex-col gap-5">
                     <Project

@@ -27,7 +27,7 @@ const Resume = () => {
     const { t } = useTranslation('common')
 
     return (
-        <div className="text-black dark:text-white min-h-screen flex flex-col items-center xl:items-start xl:flex-row mt-40 gap-10">
+        <div className="text-black dark:text-white flex flex-col items-center xl:items-start xl:flex-row mt-40 gap-10">
             <div className="flex flex-col gap-7">
                 <button className={` w-[20rem] lg:w-[23rem] hover:bg-orange-400 dark:hover:bg-orange-500 rounded-lg px-5 py-2 text-xl font-bold ${display === 'about' ?
                     'bg-orange-400 dark:bg-orange-500 hover:cursor-default' : 'bg-orange-300 dark:bg-[#2e2e2e]'}`}
