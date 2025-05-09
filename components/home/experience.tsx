@@ -15,7 +15,7 @@ export const Experience = () => {
     }
 
     return (
-        <div className="mx-auto grid grid-cols-2 gap-5 justify-center lg:gap-2 lg:flex lg:justify-between mt-10 lg:mt-20">
+        <div className="mx-auto grid grid-cols-2 gap-5 justify-center lg:gap-2 lg:flex lg:justify-between mt-10 lg:mt-20 pb-[5rem]">
             <p className="flex gap-4 items-center w-[7rem] lg:w-[13rem]"><span className="flex gap-4 items-center">
                 <CountUp end={countMonths()} duration={5} className="text-4xl xl:text-5xl font-bold" />
             </span>

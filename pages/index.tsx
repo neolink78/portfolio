@@ -13,7 +13,7 @@ export default function Home() {
   const { t } = useTranslation('common')
 
   return (
-    <div className='text-black dark:text-white flex flex-col mt-20 mb-5 lg:mb-0'>
+    <div className='text-black dark:text-white flex flex-col mt-20 '>
       {resolvedTheme === 'dark' && <ParticlesBackground />}
       <main className="flex flex-col-reverse xl:flex-row justify-between items-center">
         <div className="xl:w-96 flex flex-col gap-5 ">

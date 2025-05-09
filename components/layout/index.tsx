@@ -39,7 +39,7 @@ const Layout = ({ children }: Props) => {
         <div className={`min-h-screen text-black dark:text-white transition-colors duration-700 ${resolvedTheme === 'light' && 'bg-gradient-to-r from-[#FFE6C9] to-[#FFD0A3]'}`}>
             <div className={`max-w-2xl px-5 lg:px-0 lg:max-w-4xl xl:max-w-6xl mx-auto pt-10 pb-20 lg:pb-0`}>
                 <div className="flex justify-between items-center">
-                    <div className="text-4xl font-bold flex hover:cursor-pointer" onClick={() => router.push('/')}>
+                    <div className="text-4xl font-bold flex hover:cursor-pointer" onClick={() => router.route !== "/" && router.push('/')}>
                         {['T', 'h', 'i', 'b', 'a', 'u', 't'].map((letter, idx) => (
                             <p key={idx} className="hover:animate-wiggle transition-transform">{letter}</p>
                         ))}

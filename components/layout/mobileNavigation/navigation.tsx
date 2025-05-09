@@ -27,7 +27,7 @@ export const Navigation = ({ setIsOpen, t, changeLanguage }: NavigationType) => 
                         } text-xl w-fit hover:border-b-2 hover:border-black dark:hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => {
                         setIsOpen(false)
-                        router.push("/")
+                        if (router.route !== "/") router.push("/")
                     }}
                 >
                     {t("header_homepage")}
@@ -39,7 +39,7 @@ export const Navigation = ({ setIsOpen, t, changeLanguage }: NavigationType) => 
                         } text-xl w-fit hover:border-b-2 hover:border-black dark:hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => {
                         setIsOpen(false)
-                        router.push("/resume")
+                        if (router.route !== "/resume") router.push("/resume")
                     }}
                 >
                     {t("header_resume")}
@@ -51,7 +51,7 @@ export const Navigation = ({ setIsOpen, t, changeLanguage }: NavigationType) => 
                         } text-xl w-fit hover:border-b-2 hover:border-black dark:hover:border-orange-500 hover:cursor-pointer`}
                     onClick={() => {
                         setIsOpen(false)
-                        router.push("/projects")
+                        if (router.route !== "/projects") router.push("/projects")
                     }}
                 >
                     {t("header_projects")}

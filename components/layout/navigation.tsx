@@ -23,7 +23,7 @@ export const Navigation = ({ t, changeLanguage }: NavigationType) => {
                         ? "pb-1 border-b-2 border-orange-500 text-orange-500"
                         : "border-b border-transparent"
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
-                    onClick={() => router.push("/")}
+                    onClick={() => router.route !== "/" && router.push("/")}
                 >
                     {t("header_homepage")}
                 </p>
@@ -32,7 +32,7 @@ export const Navigation = ({ t, changeLanguage }: NavigationType) => {
                         ? "pb-1 border-b-2 border-orange-500 text-orange-500"
                         : "border-b border-transparent"
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.route !== "/resume" && router.push("/resume")}
                 >
                     {t("header_resume")}
                 </p>
@@ -41,7 +41,7 @@ export const Navigation = ({ t, changeLanguage }: NavigationType) => {
                         ? "pb-1 border-b-2 border-orange-500 text-orange-500"
                         : "border-b border-transparent"
                         } hover:border-b-2 hover:border-orange-500 hover:cursor-pointer`}
-                    onClick={() => router.push("/projects")}
+                    onClick={() => router.route !== "/projects" && router.push("/projects")}
                 >
                     {t("header_projects")}
                 </p>
