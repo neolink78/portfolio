@@ -6,7 +6,7 @@ export default function TransitionOverlay() {
     const { resolvedTheme } = useTheme()
     const [phase, setPhase] = useState<'enter' | 'exit'>('enter')
     const blocks = Array.from({ length: 5 })
-    const duration = 0.3
+    const duration = 0.44
     const delayStep = 0.08
     const entranceTime = duration + (5 - 1) * delayStep
     const holdBeforeExit = 400
