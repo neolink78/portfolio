@@ -18,7 +18,7 @@ const ParticlesBackground = () => {
   return (
     <>
       {init && (
-        <div className="fixed top-0 left-0 w-full h-full -z-10">
+        <div className="fixed top-0 left-0 -z-10">
           <Particles
             id="tsparticles"
             options={{
